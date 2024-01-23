@@ -20,3 +20,4 @@ gunzip -c ~/Code/MCB185/data/jaspar2024_core.transfac.gz |grep "insects" |wc -l
 gunzip -c ~/Code/MCB185/data/jaspar2024_core.transfac.gz |grep "plants" |wc -l
 gunzip -c ~/Code/MCB185/data/jaspar2024_core.transfac.gz |grep "vertebrates" |wc -l
 
+gunzip -c ~/Code/MCB185/data/jaspar2024_core.transfac.gz |grep "tax" | cut -d ":" -f 2 | sort | uniq -c | sort -n
