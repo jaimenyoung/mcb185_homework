@@ -27,3 +27,4 @@ def entropy(a, c, g, t):
 
 print(entropy(2, 3, 1, 0))
 print(entropy(9, 12, 3, 4))
+print(entropy(0, 4, 0, 18))
