@@ -11,7 +11,7 @@ def quadratic(a, b, c):
 		x = (-b + d) / (2 * a)
 		return x
 	else:
-		return ('no real solution')
+		return 'no real solution'
 
 
 print(quadratic(1, 5, 6))
