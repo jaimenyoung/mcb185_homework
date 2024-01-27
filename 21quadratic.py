@@ -1,7 +1,6 @@
 #Quadratic 
 
 import math
-import sys
 
 def quadratic(a, b, c):
 	d = ((b**2) - (4*a*c)) ** 0.5
