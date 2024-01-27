@@ -15,3 +15,4 @@ def accuracy(tp, fp, tn, fn):
 
 print(accuracy(2, 5, 3, 9))
 print(accuracy(0, 2, 5, 0))
+print(accuracy(5, 10, 3, 4))
