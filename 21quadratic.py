@@ -18,4 +18,3 @@ def quadratic(a, b, c):
 print(quadratic(1, 5, 6))
 print(quadratic(2, 3, 4))
 print(quadratic(4, 4, 1))
-
