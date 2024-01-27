@@ -26,3 +26,4 @@ def hydropathy(aa):
 		
 print(hydropathy('J'))
 print(hydropathy('H'))
+print(hydropathy('A'))
