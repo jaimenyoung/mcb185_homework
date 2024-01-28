@@ -1,4 +1,4 @@
-#Entropy
+#Authors: Jaime Young and Madison An
 
 import math
 
