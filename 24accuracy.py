@@ -5,10 +5,10 @@ import sys
 def accuracy(tp, fp, tn, fn):
 	if tp == 0: sys.exit('error: tp must be greater than 0')
 	
-	p = tp / (tp + fp)						#precision
-	r = tp / (tp + fn)						#recall
-	F1 = (2 * (p*r)) / (p + r)				#F1 score
-	A = (tp + tn) / (tp + fp + tn + fn)		#accuracy
+	p = tp / (tp + fp)	
+	r = tp / (tp + fn)	
+	F1 = (2 * (p*r)) / (p + r)	
+	A = (tp + tn) / (tp + fp + tn + fn)	
 	
 	return F1, A
 	
