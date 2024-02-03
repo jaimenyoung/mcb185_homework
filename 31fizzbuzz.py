@@ -1,6 +1,4 @@
-# divisible by 3 = fizz
-# divisible by 5 = buzz
-# divisible by 3 and 5 = fizzbuzz
+# FizzBuzz by: Jaime Young
 
 for i in range(1,101):
 	if i % 3 == 0:

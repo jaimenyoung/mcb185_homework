@@ -1,8 +1,4 @@
-# fibonacci
-# report first 10 numbers from fibonacci sequence
-# initialize and keep track of 2 prev values
-# fibo = n = sum of 2 preceding numbers
-
+# Fibonacci by: Jaime Young
 
 def fibonacci(n):
 	f1 = 0   
@@ -17,11 +13,3 @@ def fibonacci(n):
 		
 print(fibonacci(10))
 
-
-		
-
-
-
-
-# keep track of previous 2 values
-#sum up, then rotate values through

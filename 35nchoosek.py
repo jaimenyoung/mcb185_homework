@@ -1,4 +1,4 @@
-# function that solves n! / k!(n-k)!
+# n choose k
 
 def factorial(n):
 	f = 1

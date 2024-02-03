@@ -1,5 +1,4 @@
-#function that computes poisson probability
-# (n^k e^-n / k!)
+# poisson probability
 
 import math
 
