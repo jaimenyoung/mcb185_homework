@@ -1,4 +1,4 @@
-#scoring matrix
+# Authors: Jaime Young and Madison An
 
 n = 'ACGT'
 for i in n:

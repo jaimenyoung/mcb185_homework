@@ -1,6 +1,7 @@
 # Authors: Jaime Young and Madison An
 
 import math
+
 limit = 100
 for i in range(1, limit):
 	for j in range(i, limit):
