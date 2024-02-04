@@ -8,16 +8,10 @@ def factorial(n):
 		f = f * i
 	return f
 	
-def euler(n):
-	e = 0
-	for i in range(n):
-		e = e + 1 / factorial(i)
-	return e
-	
 def poisson(n, k):
-	return((n ** k) * (euler(10) ** -n)) / factorial(k)
+	return((n ** k) * (math.e ** -n)) / factorial(k)
 	
 print(poisson(2, 3))
-print(poisson(4, 19))
+print(poisson(7, 10))
 print(poisson(3, 0))
 
