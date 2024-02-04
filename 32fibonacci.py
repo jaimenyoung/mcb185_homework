@@ -1,4 +1,4 @@
-# Fibonacci by: Jaime Young
+# fibonacci 
 
 def fibonacci(n):
 	f1 = 0   
