@@ -33,9 +33,9 @@ Unit 4 Report
 ### 47: Death Saves ###
 + Reports probability one dies, survives, or is revived through simulated death saves
 
- |  P()   | avg stat |
- |:------:|:--------:|
- | die    |  0.421   |
- | stable |  0.449   |
- | survive|  0.130   |
+ |    X    |   P(X)   |
+ |:-------:|:--------:|
+ | die     |  0.421   |
+ | stable  |  0.449   |
+ | survive |  0.130   |
  
