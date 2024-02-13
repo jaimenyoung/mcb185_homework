@@ -1,6 +1,4 @@
-#Authors: Jaime Young and Madison An
-
-import random
+#47 Death Saves
 
 import random
 
