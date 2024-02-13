@@ -2,47 +2,42 @@
 
 import random
 
+import random
+
 rolls = 10000
-games = 0                  # number complete scenarios
-stable = 0                 # scenarios ending in stable
-die = 0                    # scenarios ending in die
-revived = 0                # scenarios ending in revive
-
-scs_tot = 0                # total success rolls
-fail_tot = 0               # total fail rolls
+die = 0
+stabilize = 0
+revive = 0
 for i in range(rolls):
-	revive = 0
-	success = 0
 	fail = 0
-	for j in range(1):
+	success = 0
+	while True:
 		r = random.randint(1, 20)
-
-		if r == 1: 
+		if r == 1:
 			fail += 2
-		if r == 20: 
+		elif r == 20:
 			revive += 1
-			games += 1
-		if 2 <= r <= 9: 
-			fail += 1
-		if 10 <= r <= 19: 
+			break
+		elif 10 <= r <= 19:
 			success += 1
-			
-	scs_tot += success
-	fail_tot += fail
-	revived += revive
+		elif 2 <= r <= 9:
+			fail += 1
 		
+		if success == 3:
+			stabilize += 1
+			break
+		elif fail == 3:
+			die += 1
+			break
 
-	if fail_tot % 3 == 0 and fail > 0: 
-		die += 1
-		games += 1
-	if scs_tot % 3 == 0 and success > 0: 
-		stable += 1
-		games += 1
-	
-print('p(die)=', die / games)
-print('p(stable)=', stable / games)
-print('p(revived)=', revived / games)
-		
+total = die + stabilize + revive
+prob_die = die / total
+prob_stable = stabilize / total
+prob_revive = revive / total
+
+print('probability of dying =', prob_die)
+print('probability of stabilizing =', prob_stable)
+print('probability of reviving =', prob_revive)
 		
 	
 		

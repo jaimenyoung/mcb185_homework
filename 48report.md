@@ -35,7 +35,7 @@ Unit 4 Report
 
  |    X    |   P(X)   |
  |:-------:|:--------:|
- | die     |  0.421   |
+ | die     |  0.362   |
  | stable  |  0.449   |
- | survive |  0.130   |
+ | survive |  0.189   |
  
