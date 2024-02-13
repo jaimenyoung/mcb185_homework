@@ -1,14 +1,12 @@
-# generates DNA in FASTA format
-# variable controlling how many sequences and identifier
-# length is random (50-60)
+# Random DNA
 
 import random
 
 nts = 0
-seq = 101                         # number of sequences
-for i in range(1, seq):                  # how to delete space?
+seq = 100                       # number of sequences
+for i in range(seq):
 	print()
-	print(f'>seq-{i}')
+	print(f'>seq-{i+1}')
 	r = random.randint(50, 60)
 	for nts in range(r):
 		print(random.choice('ACGT'), end='')
