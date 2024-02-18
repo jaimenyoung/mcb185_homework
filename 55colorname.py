@@ -1,8 +1,6 @@
+# 55colorname.py
+
 import sys
-
-#outputs the color closest to the color that you input
-
-
 
 colorfile = sys.argv[1]
 R = int(sys.argv[2])
@@ -29,18 +27,3 @@ with open('../MCB185/data/colors_extended.tsv') as fp:
 				min_color = words[0]
 
 	print(min_color)
-				
-				
-			
-
-
-'''
-
-def minimum(vals):
-	mini = vals[0]
-	for val in vals[1:]:
-		if val < mini: mini = val
-	return mini
-	
-print(minimum(vals))
-'''

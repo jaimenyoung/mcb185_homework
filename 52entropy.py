@@ -1,4 +1,4 @@
-#calculate entropy for a list of probabilities on command line
+# 52entropy.py
 
 import sys
 import math

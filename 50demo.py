@@ -1,4 +1,5 @@
 '''
+#IN CLASS NOTES:
 seq = 'GAATC'
 print(seq[0], seq [1])
 print(seq[-1])
