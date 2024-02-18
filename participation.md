@@ -24,4 +24,4 @@ Participation
 
 Notes:
 
-1. offered suggestion in class
+1. offered suggestion in class to solve programming problem
