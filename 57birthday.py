@@ -1,4 +1,6 @@
 # 57birthday.py
+#Authors: Jaime Young and Madison An
+
 import random
 import sys
 
