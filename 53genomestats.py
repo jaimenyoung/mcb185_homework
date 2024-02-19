@@ -1,3 +1,4 @@
+# Authors: Jaime Young and Madison An
 # 53genomestats.py
 
 import gzip
