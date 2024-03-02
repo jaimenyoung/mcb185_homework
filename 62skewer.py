@@ -5,22 +5,29 @@
 # cl: python3 62skewer.py ecoli.fna.gz 1000
 
 import sys
-import dogma
 import mcb185
 
-dnafile = sys.argv[1]
-window = sys.argv[2]
-
 for defline, seq in mcb185.read_fasta(sys.argv[1]):
-	defwords = defline.split()
-	w = int(sys.argv[2])                 #number nts in window
-	s = seq[:w+1]                        #first window sequence
-	gc = 0
+	w = int(sys.argv[2])
 	for i in range(len(seq) -w +1):
-		s = seq[i:i+w]                   #moving window up 1 nt
-		if seq[i - 1] == 'G' or 'C':     #leaving window
-			gc -= 1
-		if seq[w + i - 1] == 'G' or 'C': #entering window
-			gc += 1
-		print(f'{i}\t{dogma.gc_comp(s):.3f}\t{dogma.gc_skew(s):.3f}')
+		s = seq[i:i+w]
+		off = seq[i - 1]
+		on = seq[i + w - 1]
+		#print(off, on)
+	
+		if i == 0:
+			c = s.count('C')
+			g = s.count('G')
+
+		else:
+			if   off == 'C': c -= 1
+			elif off == 'G': g -= 1
+	
+			if   on == 'C': c += 1
+			elif on == 'G': g += 1
+	
+		comp = (g+c) / w
+		if (g + c) > 0: skew = (g-c) / (g+c)
+		else:           skew = 0
 		
+		print(f'{i}\t{comp:.3f}\t{skew:.3f}')
