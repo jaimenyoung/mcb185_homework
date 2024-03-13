@@ -43,22 +43,20 @@ with gzip.open(sys.argv[1], 'rt') as fp:
 				beg_str = line[start:stop].split('..')[0]
 				end_str = line[start:stop].split('..')[1]
 				beg, end = int(beg_str), int(end_str)
-				coord.append((beg, end))
+				coord.append((beg, end, True))
 			elif 'complement' not in line:
 				beg_str = line.split()[1].split('..')[0]
 				end_str = line.split()[1].split('..')[1]
 				beg, end = int(beg_str), int(end_str)
-				coord.append((beg, end))
+				coord.append((beg, end, False))
 
-for beg, end in coord:
+for beg, end, is_neg in coord:
 	kozak = genome[beg-10:beg+4]
-	if 'complement' in kozak:
+	if is_neg:
 		kozak = mcb185.anti_seq(genome[end-5:end+9])
 	else:
 		kozak = genome[beg-10:beg+4]
-#	print(kozak)
-	#print(beg, end)
-			
+	
 	for i, nt in enumerate(kozak):
 		kozak_seq[i][nt] += 1
 
