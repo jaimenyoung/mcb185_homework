@@ -2,6 +2,7 @@
 # for E.coli using the GenBank flat file: MCB185/data/*.gbff.gz. 
 # Output the PWM in TRANSFAC format.
 
+#Authors: Jaime Young and Madison An
 #cl: python3 83kozak.py ../MCB185/data/GCF_000005845.2_ASM584v2_genomic.gbff.gz
 
 import gzip
@@ -25,7 +26,7 @@ with gzip.open(sys.argv[1], 'rt') as fp:
 			line = line.split()
 			for seq in line[1:]:
 				gene.append(seq)
-	genome = ''.join(gene)             #whole genome
+	genome = ''.join(gene)
 
 kozak_seq = []
 for i in range(14):
