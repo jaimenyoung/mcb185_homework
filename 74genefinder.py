@@ -1,3 +1,4 @@
+#Authors: Jaime Young and Avery Adelseck
 #cl: python3 74genefinder.py ecoli.fna.gz 300
 
 import sys
