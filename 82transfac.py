@@ -1,5 +1,5 @@
 #Authors: Jaime Young and Madison An
-
+#cl: python3 82transfac.py ../MCB185/data/jaspar2024_core.transfac.gz
 
 import json
 import gzip
