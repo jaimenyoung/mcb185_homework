@@ -1,4 +1,5 @@
 #47 Death Saves
+#Authors: Jaime Young and Madison An
 
 import random
 
@@ -21,10 +22,10 @@ for i in range(rolls):
 		elif 2 <= r <= 9:
 			fail += 1
 		
-		if success == 3:
+		if success >= 3:
 			stabilize += 1
 			break
-		elif fail == 3:
+		elif fail >= 3:
 			die += 1
 			break
 
@@ -36,12 +37,3 @@ prob_revive = revive / total
 print('probability of dying =', prob_die)
 print('probability of stabilizing =', prob_stable)
 print('probability of reviving =', prob_revive)
-		
-	
-		
-		
-		
-		
-		
-		
-
